@@ -31,3 +31,31 @@ function printProductInfo( result : ApiResult<Product> ):void{
 
 
 }
+
+//============================================================================
+//usage
+
+const p :Product={
+    id:1,
+    name:"laptop",
+    price:10000,
+    inStock:true
+}
+logProduct(p);
+
+
+let pOrE:productOrError;
+pOrE= p ;
+if(typeof(p) == typeof(pOrE)){
+    console.log("p is productOrError");
+}
+
+const num = wrapValue<number>(5);
+console.log(num);
+
+const apiProduct: ApiResult<Product>={
+    data:p,
+    success:true,
+    message:"succesful"
+}
+printProductInfo(apiProduct);
