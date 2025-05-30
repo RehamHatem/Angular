@@ -1,0 +1,24 @@
+<!-- Projects section -->
+<section id="projects">
+  <div>
+    <h2>Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" *ngFor="let project of projects">
+        <div class="card">
+          <img [src]="project.image" class="card-img-top" [alt]="project.title + ' Project'">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <div class="card-text">
+              {{ project.description }}
+              <!-- <ul>
+                <li *ngFor="let detail of project.details">{{ detail }}</li>
+              </ul> -->
+              <br>
+              <a [href]="project.link" class="btn btn-project " target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
