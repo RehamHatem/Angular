@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { User } from './../user';
 import { CommonModule, NgClass } from '@angular/common';
 
@@ -9,7 +9,7 @@ import { CommonModule, NgClass } from '@angular/common';
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
-export class UsersComponent {
+export class UsersComponent implements OnChanges{
   users : User[]=[
     {
       image: "./../../favicon.ico",
@@ -40,5 +40,21 @@ export class UsersComponent {
     verified:false
     }
   ];
+
+
+  @Input() searchValue: string = '';
+  filteredUsers: User[] = [];
+   ngOnChanges() {
+    console.log("i'm in users");
+    
+    this.filterUsers();
+    console.log(this.filteredUsers);
+  }
+
+  filterUsers() {
+    this.filteredUsers = this.users.filter(user =>
+      user.email.toLowerCase().includes(this.searchValue)
+    );
+  }
 
 }

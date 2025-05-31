@@ -1,6 +1,8 @@
 <div class="container">
-@for(user of users; track user.image){
 
+@if(filteredUsers!=[]){
+    @for(user of filteredUsers; track user.image){
+    
         <div class="card">
             <img [src]="user.image" alt="">
             <p>Username : {{user.userName}} <span [ngClass]=" user.verified? 'star' : 'starred' ">★</span></p>
@@ -9,5 +11,19 @@
         </div>
         
    
+}
+}
+@if(filteredUsers==[]){
+    @for(user of users; track user.image){
+    
+        <div class="card">
+            <img [src]="user.image" alt="">
+            <p>Username : {{user.userName}} <span [ngClass]=" user.verified? 'star' : 'starred' ">★</span></p>
+            <p>Email : {{user.email}} </p>
+            <p>Phone : {{user.phone}} </p>
+        </div>
+        
+   
+}
 }
  </div>

@@ -1,7 +1,7 @@
 <div class="content">
     <div class="search-container">
-        <input type="text" placeholder="email">
-        <button type="submit" >Search</button>
+        <input type="text"  [(ngModel)]="searchInput" placeholder="email  ">
+        <button type="submit" (click)="search()">Search</button>
     </div>
 
 </div>

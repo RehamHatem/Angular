@@ -12,4 +12,10 @@ import { UsersComponent } from './users/users.component';
 })
 export class AppComponent {
   title = 'users-list';
+
+  searchword: string = '';
+
+  searchChange(val: string) {
+    this.searchword = val;
+  }
 }
