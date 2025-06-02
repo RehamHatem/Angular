@@ -1,0 +1,23 @@
+<div *ngIf="product" class="product-details">
+  <div class="image-section">
+    <img [src]="product.imageUrl" [alt]="product.name" />
+  </div>
+
+  <div class="info-section">
+    <h2>{{ product.name }}</h2>
+    <p class="description">{{ product.description }}</p>
+
+    <p class="price">
+      EGP {{ product.price }}
+      <span *ngIf="product.oldPrice" class="old-price">EGP {{ product.oldPrice }}</span>
+    </p>
+
+    <p class="rating">Rating: {{ product.rating }} ⭐</p>
+    <p class="stock" [ngClass]="{ 'in-stock': product.inStock, 'out-of-stock': !product.inStock }">
+      {{ product.inStock ? 'In Stock' : 'Out of Stock' }}
+    </p>
+
+    <button class="buy">Buy Now</button>
+    <button class="add">Add to Cart</button>
+  </div>
+</div>

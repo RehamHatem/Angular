@@ -1,0 +1,50 @@
+.product-details {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.image-section img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info-section {
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+  color: #888;
+}
+
+.stars {
+  color: #ffc107;
+  margin-top: 0.5rem;
+}
+
+.filled {
+  color: #ffc107;
+}
+
+.stock-status {
+  margin-top: 0.5rem;
+}
+
+.in-stock {
+  color: green;
+}
+
+.out-of-stock {
+  color: red;
+}
