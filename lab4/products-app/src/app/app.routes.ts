@@ -5,9 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-    {path:'',component:ProductsPageComponent},
+    {path:'products',component:ProductsPageComponent , canActivate:[authGuard]},
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
     {path:'cart',component:CartComponent},

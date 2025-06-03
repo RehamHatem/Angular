@@ -2,7 +2,7 @@ import { Component,  } from '@angular/core';
 import { Product } from '../product';
 import { ProductsCardComponent } from '../products-card/products-card.component';
 import { CommonModule } from '@angular/common';
-import { ProductServiceService } from '../product-service.service';
+import { ProductServiceService } from '../services/product-service.service';
 @Component({
   selector: 'app-products-page',
   standalone: true,

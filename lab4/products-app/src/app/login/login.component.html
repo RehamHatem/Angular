@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="main">
+        <h3>login </h3>
+        <form #userForm="ngForm" (ngSubmit)="login()">
+            <label for="first">Username:</label>
+            <input type="text" id="first" name="name" [(ngModel)]="user.name"  placeholder="Enter your Username" required  #nameRef="ngModel">
+            @if(nameRef.invalid && nameRef.touched){
+                <span>name is required</span>
+            }
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"[(ngModel)]="user.email"  placeholder="Enter your Email" #emailRef="ngModel" required>
+            @if(emailRef.invalid && emailRef.touched){
+                <span>email is required</span>
+            }
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="user.password"
+             placeholder="Enter your Password" #passwordRef="ngModel" pattern="^[0-9]{3,}$" required>
+            @if(passwordRef.errors?.['pattern'] && passwordRef.touched){
+                <span>email is not valid</span>
+            }
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <p>Not registered?
+            <a  style="text-decoration: none;">
+
+                
+                Create an account
+            </a>
+        </p>
+    </div>
