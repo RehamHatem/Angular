@@ -1,14 +1,15 @@
 .navbar {
-  background: rgba(40, 40, 40, 0.9);
-  backdrop-filter: blur(12px);
+  background: #328072;
+  /* backdrop-filter: blur(12px); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15px 0;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 1000;
+  
 }
 .navbar-brand {
-  color: #ff4081 !important;
+  color: #fbf1cd !important;
   font-weight: 700;
   font-size: 2rem;
   transition: transform 0.3s ease;
@@ -17,17 +18,17 @@
   transform: scale(1.05);
 }
 .nav-link {
-  color: #f0f0f0 !important;
+  color: #fbf1cd !important;
   font-weight: 500;
   margin: 0 20px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .nav-link:hover {
-  color: #ff4081 !important;
+  color: #fbedbc !important;
   transform: translateY(-2px);
 }
 .nav-link.active {
-  color: #ff4081 !important;
+  color: #fbedbc !important;
   font-weight: 700;
-  border-bottom: 2px solid #ff4081;
+  border-bottom: 2px solid #367a6e;
 }
